@@ -1,0 +1,31 @@
+MI CIUDAD SOBRE RUEDAS — Diccionario digital interactivo
+====================================================================
+
+FLUJO:  PORTADA  →  CARRO · BICICLETA · BUS · SCÚTER · MOTO  →  JUEGO  →  FINAL
+
+CÓMO ABRIRLO
+  Abre index.html en el navegador (o sube la carpeta a cualquier hosting).
+  No necesita instalación.
+
+LECCIÓN
+  La voz dice:  CARRO. (pausa) es un vehículo grande con cuatro llantas que se mueve por la pista.
+  La ORACIÓN ("Viajo sentado en el carro con mi familia.") solo se lee al tocar el botón ORACIÓN.
+  La pausa se cambia con PAUSE_MS al inicio de js/main.js (900 = casi 1 segundo).
+
+JUEGO
+  Pregunta directa: "¿Dónde está el carro?"  Se toca el video correcto.
+
+DÓNDE VA CADA ARCHIVO
+  assets/video/portada.mp4        Video de portada (en bucle, sin sonido)
+  assets/video/carro.mp4          Video de la lección (4:3, 960x720, sin audio)
+  assets/video/carro_card.mp4     Video del juego (cuadrado, 480x480, liviano)
+  ... lo mismo para: bicicleta, bus, scuter, moto
+
+  Si falta el video de una palabra, esa palabra se omite automáticamente.
+
+CAMBIAR / AGREGAR PALABRAS
+  Todo está en la lista ITEMS al inicio de js/main.js
+  (palabra, emoji, color, definición, oración, pregunta y respuesta del juego, videos).
+
+PREPARAR VIDEOS (opcional, requiere ffmpeg)
+  ./preparar_videos.sh mi_video.mp4 carro
